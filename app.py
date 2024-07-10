@@ -24,6 +24,7 @@ def load_user(id):
     return User.query.get(int(id))
 
 @app.errorhandler(404)
+#page not found comment
 def page_not_found(err):
     """handler"""
     return {"error": "Not found"}, 404
